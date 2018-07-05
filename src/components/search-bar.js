@@ -10,20 +10,25 @@ constructor(props){
 }
 
 render(){
-
-	return (
-		<div>
-			<input onChange={this.handleChange.bind(this)} placeholder={this.state.placeHolder}/>
-			<p>{this.state.searchText}</p>
-		</div>
+	return (		
+				<div className="row">
+					<div className="col-md-8 input-group">
+						<input onKeyUp={this.handleChange.bind(this)} type="text" className="form-control input-lg" onChange={this.handleChange.bind(this)} placeholder={this.state.placeHolder}/>
+						<span className="input-group-btn">
+							<button className="btn btn-secondary" onClick={this.handleOnClick.bind(this)}>Go</button>
+						</span>
+					</div>
+				</div>
 			)
 		}
 
+handleOnClick(e){
+	this.props.callback(this.state.searchText);
+}
 
 handleChange(e) {
 
 	this.setState({searchText:e.target.value});
-
 				}
 
 }
