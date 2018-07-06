@@ -10,6 +10,7 @@ const API_END_POINT = "https://api.themoviedb.org/3/";
 const POPULAR_MOVIES_URL = "discover/movie?language=fr&sort_by=popularity.desc&include_adult=false&append_to_response=images";
 const API_KEY = "api_key=0b5daafbc79c2ea78ca85756b1152f0d";
 const SEARCH_URL="search/movie?language=fr&include_adult=false";
+
 class App extends Component{
 
 
